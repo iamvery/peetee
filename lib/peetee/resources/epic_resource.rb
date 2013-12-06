@@ -1,5 +1,5 @@
 module Peetee
-  class Epic
+  class EpicResource
     include Resource
 
     attribute :id, Integer

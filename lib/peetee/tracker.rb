@@ -9,11 +9,11 @@ module Peetee
     end
 
     def project(project_id)
-      ProjectEndpoint.show(token, project_id)
+      ProjectPath.new(token, project_id)
     end
 
     def projects
-      ProjectsEndpoint.index(token)
+      ProjectsPath.new(token)
     end
 
   end
