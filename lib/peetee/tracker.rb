@@ -7,15 +7,13 @@ module Peetee
     end
 
     def project(project_id)
-      response = @client.project(project_id: project_id).perform
-      project = response.parse
-      Project.new(project)
+      project_attributes = @client.project(project_id: project_id).perform.parse
+      Project.new(@client, project_attributes)
     end
 
     def projects
-      response = @client.projects.perform
-      projects = response.parse
-      projects.map { |project| Project.new(project) }
+      projects_attributes = @client.projects.perform.parse
+      projects_attributes.map { |project_attributes| Project.new(@client, project_attributes) }
     end
 
   end
