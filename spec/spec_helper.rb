@@ -2,6 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'dotenv'
 require 'peetee'
+require 'vcr'
 
 Dotenv.load
 
@@ -15,4 +16,10 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+end
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/vcr_cassettes'
+  c.configure_rspec_metadata!
+  c.hook_into :webmock
 end

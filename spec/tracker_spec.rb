@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Peetee::Tracker do
+describe Peetee::Tracker, :vcr do
 
   it "should get projects" do
     tracker = Peetee::Tracker.new(ENV['TOKEN'])
@@ -10,12 +10,12 @@ describe Peetee::Tracker do
     expect(projects.first).to be_kind_of(Peetee::ProjectResource)
   end
 
-  it "shoud create a project" do
+  it "should create a project" do
     tracker = Peetee::Tracker.new(ENV['TOKEN'])
 
-    project = tracker.projects.post(name: "New Project", public: true)
+    project = tracker.projects.post(name: "Peetee Test Project", public: true)
     expect(project).to be_kind_of(Peetee::ProjectResource)
-    expect(project.name).to eq("New Project")
+    expect(project.name).to eq("Peetee Test Project")
   end
 
   it "should get a project" do

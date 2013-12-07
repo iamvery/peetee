@@ -24,4 +24,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "dotenv", "~> 0.9.0"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec", "~> 2.14.1"
+  spec.add_development_dependency "vcr", "~> 2.8.0"
+  spec.add_development_dependency "webmock", "~> 1.16.0"
 end
