@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "virtus", "~> 1.0.0"
 
   spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_development_dependency "coco", "~> 0.7.1"
   spec.add_development_dependency "dotenv", "~> 0.9.0"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec", "~> 2.14.1"

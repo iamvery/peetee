@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'bundler/setup'
+require 'coco'
 require 'dotenv'
 require 'peetee'
 require 'vcr'
