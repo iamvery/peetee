@@ -13,6 +13,6 @@ module Peetee
     attribute :error, String
     attribute :general_problem, String
     attribute :kind, String
-
+    attribute :validation_errors, Array
   end
 end

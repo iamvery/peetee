@@ -1,11 +1,6 @@
+require "rest_client"
 require "virtus"
-require "weary/client"
 
-require "peetee/middleware"
-require "peetee/endpoint"
-require "peetee/endpoints/epics_endpoint"
-require "peetee/endpoints/project_endpoint"
-require "peetee/endpoints/projects_endpoint"
 require "peetee/path"
 require "peetee/paths/project_epics_path"
 require "peetee/paths/project_path"

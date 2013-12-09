@@ -4,5 +4,10 @@ module Peetee
 
     attribute :id, Integer
     attribute :name, String
+
+    def epics
+      ProjectEpicsPath.new(token, id)
+    end
+
   end
 end

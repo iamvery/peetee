@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.pivotaltracker.com/services/v5/projects/964498
+    uri: https://www.pivotaltracker.com/services/v5/projects/971936
     body:
       encoding: US-ASCII
       string: ''
@@ -32,14 +32,14 @@ http_interactions:
       - '200'
       X-Powered-By:
       - Phusion Passenger (mod_rails/mod_rack) 3.0.14
+      X-Tracker-Project-Version:
+      - '1'
       X-Runtime:
-      - '49'
+      - '44'
+      Etag:
+      - '"f7b280bd8de9f485da54d134c7f20ccd"'
       Cache-Control:
       - private, max-age=0, must-revalidate
-      Etag:
-      - '"53e67ebb94896e570fd8e7b0ce039c76"'
-      X-Tracker-Project-Version:
-      - '7'
       Server:
       - nginx/1.2.2 + Phusion Passenger 3.0.14 (mod_rails/mod_rack)
       Access-Control-Allow-Origin:
@@ -54,36 +54,36 @@ http_interactions:
       encoding: UTF-8
       string: |-
         {
-          "initial_velocity": 10,
-          "iteration_length": 1,
-          "name": "Peetee",
-          "id": 964498,
-          "has_google_domain": false,
+          "time_zone": {
+            "offset": "-08:00",
+            "olson_name": "America/Los_Angeles",
+            "kind": "time_zone"
+          },
+          "enable_planned_mode": false,
+          "number_of_done_iterations_to_show": 12,
+          "current_iteration_number": 1,
           "public": true,
           "bugs_and_chores_are_estimatable": false,
-          "kind": "project",
-          "updated_at": "2013-11-25T17:01:16Z",
-          "start_time": "2013-12-02T05:00:00Z",
+          "created_at": "2013-12-07T01:25:33Z",
           "enable_incoming_emails": true,
-          "number_of_done_iterations_to_show": 12,
-          "enable_planned_mode": false,
-          "point_scale_is_custom": false,
-          "current_iteration_number": 1,
-          "atom_enabled": false,
-          "time_zone": {
-            "offset": "-05:00",
-            "kind": "time_zone",
-            "olson_name": "America/New_York"
-          },
-          "week_start_day": "Monday",
-          "account_id": 53831,
-          "created_at": "2013-11-25T17:01:16Z",
+          "has_google_domain": false,
           "point_scale": "0,1,2,3",
-          "version": 7,
-          "enable_following": true,
+          "week_start_day": "Monday",
           "velocity_averaged_over": 3,
+          "name": "Peetee Test Project",
+          "start_time": "2013-12-02T00:00:00Z",
+          "initial_velocity": 10,
+          "version": 1,
+          "kind": "project",
+          "enable_following": true,
+          "account_id": 595468,
+          "point_scale_is_custom": false,
+          "iteration_length": 1,
+          "updated_at": "2013-12-07T01:25:33Z",
+          "atom_enabled": false,
+          "id": 971936,
           "enable_tasks": true
         }
     http_version: 
-  recorded_at: Sat, 07 Dec 2013 01:13:25 GMT
+  recorded_at: Sat, 07 Dec 2013 01:33:12 GMT
 recorded_with: VCR 2.8.0

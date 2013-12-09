@@ -3,5 +3,6 @@ module Peetee
     include Resource
 
     attribute :id, Integer
+    attribute :name, String
   end
 end

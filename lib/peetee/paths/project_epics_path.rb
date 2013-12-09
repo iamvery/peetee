@@ -4,13 +4,20 @@ module Peetee
     attr_reader :project_id
 
     def initialize(token, project_id)
-      super token
+      super token, "projects/#{project_id}/epics"
       @project_id = project_id
     end
 
+    # https://www.pivotaltracker.com/help/api/rest/v5#projects_project_id_epics_get
     def get
-      resources = EpicsEndpoint.new(token).get(project_id: project_id).perform.parse
+      resources = super
       resources.map { |resource| EpicResource.new(token, resource) }
+    end
+
+    # https://www.pivotaltracker.com/help/api/rest/v5#projects_project_id_epics_post
+    def post(parameters)
+      resource = super(parameters)
+      EpicResource.new(token, resource)
     end
 
   end
