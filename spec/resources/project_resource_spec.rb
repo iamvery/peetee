@@ -16,4 +16,11 @@ describe Peetee::ProjectResource, :vcr do
     expect(epics.first).to be_kind_of(Peetee::EpicResource)
   end
 
+  it 'creates a story' do
+    project = Peetee::ProjectResource.new(ENV['TOKEN'], { id: ENV['PROJECT_ID'] })
+    story = project.stories.post(name: 'Peetee Test Story')
+    expect(story).to be_kind_of(Peetee::StoryResource)
+    expect(story.name).to eq('Peetee Test Story')
+  end
+
 end

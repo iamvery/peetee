@@ -9,5 +9,9 @@ module Peetee
       ProjectEpicsPath.new(token, id)
     end
 
+    def stories
+      ProjectStoriesPath.new(token, id)
+    end
+
   end
 end
