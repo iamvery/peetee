@@ -23,4 +23,11 @@ describe Peetee::ProjectResource, :vcr do
     expect(story.name).to eq('Peetee Test Story')
   end
 
+  it 'gets memberships' do
+    project = Peetee::ProjectResource.new(ENV['TOKEN'], { id: ENV['PROJECT_ID'] })
+    memberships = project.memberships.get
+    expect(memberships).to be_kind_of(Array)
+    expect(memberships.first).to be_kind_of(Peetee::MembershipResource)
+  end
+
 end
